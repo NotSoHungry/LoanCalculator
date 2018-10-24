@@ -1,0 +1,52 @@
+body {
+  font-size: 16px;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.bg-dark {
+  background: #212529;
+}
+
+.center-horizontal-margin {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  background: #fff;
+  margin-top: 60px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-calculate-custom {
+  display: block;
+  background-color: #343a40;
+  border-color: #343a40;
+  color: #fff;
+  width: 100%;
+  font-size: 1em;
+  letter-spacing: .5px;
+  transition: background-color .3s ease-out;
+}
+
+.btn-calculate-custom:hover {
+  background-color: #23272b;
+  border-color: #23272b;
+  color: #fff;
+}
+
+.card-results {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.3em;
+  text-align: center;
+}
