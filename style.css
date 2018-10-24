@@ -24,6 +24,12 @@ h1 {
   margin-bottom: 30px;
 }
 
+.form-error-custom {
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px;
+}
+
 .btn-calculate-custom {
   display: block;
   background-color: #343a40;
