@@ -30,6 +30,11 @@ h1 {
   padding: 12px;
 }
 
+.input-loan-custom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .btn-calculate-custom {
   display: block;
   background-color: #343a40;
