@@ -19,9 +19,9 @@ function calculate(e) {
 					totalInterest = totalPayment - loanAmount;
 
 		// Print results
-			document.querySelector("#monthly-payment").value = monthlyPayment;
-			document.querySelector("#total-payment").value = totalPayment;
-			document.querySelector("#total-interest").value = totalInterest;
+			document.querySelector("#monthly-payment").value = monthlyPayment.toFixed(2);
+			document.querySelector("#total-payment").value = totalPayment.toFixed(2);
+			document.querySelector("#total-interest").value = totalInterest.toFixed(2);
 	} else {
 		// Create error div
 		let errorMessage = document.createElement('div'),
