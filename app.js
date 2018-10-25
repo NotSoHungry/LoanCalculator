@@ -30,13 +30,13 @@ function calculate(e) {
 		errorMessage.classList = "alert alert-danger form-error-custom";
 
 		// Add error message above the form
-		const loanForm = document.querySelector("#loan-form");
-		document.querySelector(".card-form").insertBefore(errorMessage, loanForm);
+		const loanFormHeader = document.querySelector(".card-form h1");
+		document.querySelector(".card-form").insertBefore(errorMessage, loanFormHeader);
 
 		// Remove the error message after 3 seconds
 		window.setTimeout(() => {
 			errorMessage.remove();
-		}, 3000);
+		}, 2000);
 	}
 	
 	e.preventDefault();
