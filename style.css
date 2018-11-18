@@ -57,7 +57,8 @@ h1 {
   padding-bottom: 20px;
   overflow: hidden;
   max-height: 0;
-  transition: max-height .5s;
+  /* min-height: 500px; */
+  transition: max-height .5s ease-out;
 }
 
 .card-results__loader {
@@ -69,8 +70,8 @@ h1 {
   margin: 0 auto;
   opacity: 0;
   height: auto;
-  transform: scale(1.2);
-  transition: transform .4s ease-out, opacity .5s ease-out
+  transform: scale(1.4);
+  transition: transform .2s ease-out, opacity .5s ease-out
 }
 
 .card-results.show-results {
