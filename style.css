@@ -55,6 +55,36 @@ h1 {
 .card-results {
   padding-top: 10px;
   padding-bottom: 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .5s;
+}
+
+.card-results__loader {
+  visibility: hidden;
+}
+
+.card-results__loader img {
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  height: auto;
+  transform: scale(1.2);
+  transition: transform .4s ease-out, opacity .5s ease-out
+}
+
+.card-results.show-results {
+  max-height: 1000px;
+}
+
+.card-results__loader.show {
+  visibility: visible;
+}
+
+.card-results__loader.show img {
+  opacity: 100;
+  transform: scale(1);
+
 }
 
 h3 {
