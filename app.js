@@ -23,22 +23,25 @@ function calculate(e) {
 	// Function for generating the result's html markup
 	const generateResults = function(monthlyPayment, totalPayment, totalInterest) {
 		return `
-			<div class="form-group">
-				<div class="input-group">
-						<span class="input-group-addon">Monthly Payment</span>
-						<input type="number" class="form-control" id="monthly-payment" value=${monthlyPayment} disabled>
+			<div class="card-results__results">
+				<h3>Results</h3>
+				<div class="form-group">
+					<div class="input-group">
+							<span class="input-group-addon">Monthly Payment</span>
+							<input type="number" class="form-control" id="monthly-payment" value=${monthlyPayment} disabled>
+					</div>
 				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group">
-						<span class="input-group-addon">Total Payment</span>
-						<input type="number" class="form-control" id="total-payment" value=${totalPayment} disabled>
+				<div class="form-group">
+					<div class="input-group">
+							<span class="input-group-addon">Total Payment</span>
+							<input type="number" class="form-control" id="total-payment" value=${totalPayment} disabled>
+					</div>
 				</div>
-			</div>
-			<div class="form-group">
-				<div class="input-group">
-						<span class="input-group-addon">Total Interest</span>
-						<input type="number" class="form-control" id="total-interest" value=${totalInterest} disabled>
+				<div class="form-group">
+					<div class="input-group">
+							<span class="input-group-addon">Total Interest</span>
+							<input type="number" class="form-control" id="total-interest" value=${totalInterest} disabled>
+					</div>
 				</div>
 			</div>
 		`
@@ -46,10 +49,10 @@ function calculate(e) {
 
 	// Expand the results card and show loader icon
 	resultsCard.innerHTML = generateResultsLoader();
-	resultsCard.classList.toggle('show-results');
+	resultsCard.className += ' show-results';
 	setTimeout(function() {
 		resultsCard.firstElementChild.classList.toggle('show');
-	}, 10);
+	}, 100);
 	
 
 	
@@ -64,9 +67,13 @@ function calculate(e) {
 					totalInterest = totalPayment - loanAmount;
 
 		// Print results
-			document.querySelector("#monthly-payment").value = monthlyPayment.toFixed(2);
-			document.querySelector("#total-payment").value = totalPayment.toFixed(2);
-			document.querySelector("#total-interest").value = totalInterest.toFixed(2);
+			setTimeout(function() {
+				resultsCard.innerHTML = generateResults(monthlyPayment.toFixed(2), totalPayment.toFixed(2), totalInterest.toFixed(2));
+			}, 3000);
+	    
+			// document.querySelector("#monthly-payment").value = monthlyPayment.toFixed(2);
+			// document.querySelector("#total-payment").value = totalPayment.toFixed(2);
+			// document.querySelector("#total-interest").value = totalInterest.toFixed(2);
 	} else {
 		setTimeout(function() {
 			// Create error div
@@ -89,7 +96,7 @@ function calculate(e) {
 			window.setTimeout(() => {
 				errorMessage.remove();
 			}, 2000);
-		}, 700)
+		}, 1000)
 	}
 	
 	e.preventDefault();
